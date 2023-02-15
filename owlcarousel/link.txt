@@ -1,0 +1,13 @@
+<!-- Owl carousel  -->
+
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
+
+
+s<!-- Owl carousel JS  -->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script src="owlcarousel/owl.carousel.min.js"></script>

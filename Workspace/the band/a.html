@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <button>Click this to get data</button>
+    <div class="data">
+
+    </div>
+
+    <script>
+        var a = $("button")
+        var b = $("div")
+
+        a.bind("click", function (e) {
+            var xhttp = new XMLHttpRequest()
+            xhttp.open('GET', 'https://632d7eda519d17fb53bf6364.mockapi.io/pets');
+            xhttp.onload = function () {
+                var file = JSON.parse(xhttp.responseText);
+                render(file);
+            }
+            xhttp.send();
+        })
+
+        function render(data) {
+            var c = `Tôi tên là ${data[0].name} năm nay tôi ${data[0].age} tuổi. ${data[0].name} said that: ${data[0].message} 
+        Tôi tên là ${data[1].name} năm nay tôi ${data[1].age} tuổi. ${data[1].name} said that: ${data[1].message}`
+            b.html(c)
+        }
+
+
+
+    </script>
+</body>
+
+</html>
